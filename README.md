@@ -158,13 +158,11 @@ The action talks to ComfyUI over HTTP and needs the right port.
 1. In Streamer.bot, create a new **Action** (e.g. `AI Voice`).
 2. Add one sub-action: **Core -> C# -> Execute C# Code**.
 3. Paste the entire contents of `ai_tts_pipeline.cs` into the code editor.
-4. Click **References** and add:
-   - `System.Net.Http.dll`
-   - `Newtonsoft.Json.dll`
+4. Click **Find References**
 5. **Edit the config block at the top of the code** (see
    [Configuration](#configuration)). At minimum you must set the two `CHANGEME`
    paths and your system prompt.
-6. Compile (Streamer.bot compiles on save). Fix any reference errors.
+6. Compile (Streamer.bot compiles on save). Fix any reference errors. When ready, **Save and Compile** to exit
 7. Add a **Command** trigger: create a command with keyword `!ai`, set it to pass
    the message, and point it at this action. The chat text after `!ai` arrives as
    the `rawInput` argument, which is what the action reads.
