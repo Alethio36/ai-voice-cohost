@@ -1,0 +1,117 @@
+{
+  "15": {
+    "inputs": {
+      "audioUI": "",
+      "audio": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "PreviewAudio",
+    "_meta": {
+      "title": "Preview Audio"
+    }
+  },
+  "26": {
+    "inputs": {
+      "audio": "",
+      "audioUI": ""
+    },
+    "class_type": "LoadAudio",
+    "_meta": {
+      "title": "Load Audio"
+    }
+  },
+  "46": {
+    "inputs": {
+      "language": "English",
+      "device": "auto",
+      "exaggeration": 0.7,
+      "temperature": 0.8,
+      "cfg_weight": 0.3,
+      "crash_protection_template": "\"Well, ummmm, {seg}, eh?"
+    },
+    "class_type": "ChatterBoxEngineNode",
+    "_meta": {
+      "title": "\u2699\ufe0f ChatterBox TTS Engine"
+    }
+  },
+  "47": {
+    "inputs": {
+      "text": [
+        "65",
+        0
+      ],
+      "narrator_voice": "none",
+      "seed": 1552347952,
+      "enable_chunking": true,
+      "max_chars_per_chunk": 400,
+      "chunk_combination_method": "auto",
+      "silence_between_chunks_ms": 100,
+      "enable_audio_cache": true,
+      "batch_size": 0,
+      "TTS_engine": [
+        "46",
+        0
+      ],
+      "opt_narrator": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "UnifiedTTSTextNode",
+    "_meta": {
+      "title": "\ud83c\udfa4 TTS Text"
+    }
+  },
+  "50": {
+    "inputs": {
+      "source": [
+        "47",
+        1
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "Preview as Text"
+    }
+  },
+  "51": {
+    "inputs": {
+      "voice_name": "voices_examples/Morgan_Freeman CC3.wav",
+      "reference_text": "",
+      "opt_audio_input": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "CharacterVoicesNode",
+    "_meta": {
+      "title": "\ud83c\udfad Character Voices"
+    }
+  },
+  "65": {
+    "inputs": {
+      "value": "This text is replaced at runtime by the pipeline."
+    },
+    "class_type": "PrimitiveStringMultiline",
+    "_meta": {
+      "title": "Text String (Multiline)"
+    }
+  },
+  "74": {
+    "inputs": {
+      "filename_prefix": "slime/slime-",
+      "quality": "320k",
+      "audioUI": "",
+      "audio": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
+    }
+  }
+}
