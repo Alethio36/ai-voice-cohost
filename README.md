@@ -13,6 +13,8 @@ for example a mouth-flap animation — can react to them.
 
 Everything runs **locally**. No cloud APIs, no keys.
 
+**As a disclaimer this project was in part brought to life with the use of AI/LLM**
+
 ---
 
 ## Scope
